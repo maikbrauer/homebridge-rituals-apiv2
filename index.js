@@ -236,13 +236,13 @@ RitualsAccessory.prototype = {
             headers['Content-Type'] = 'application/x-www-form-urlencoded';
             config.data = bodyStr;
 
-            that.log.warn('==== REQUEST DUMP =================================');
-            that.log.warn('URL     : ' + url);
-            that.log.warn('Method  : POST');
-            that.log.warn('Headers : ' + JSON.stringify(headers));
-            that.log.warn('BodyHex : ' + Buffer.from(bodyStr).toString('hex'));
-            that.log.warn('BodyUtf8: ' + bodyStr);
-            that.log.warn('===============================================');
+            that.log.debug('==== REQUEST DUMP =================================');
+            that.log.debug('URL     : ' + url);
+            that.log.debug('Method  : POST');
+            that.log.debug('Headers : ' + JSON.stringify(headers));
+            that.log.debug('BodyHex : ' + Buffer.from(bodyStr).toString('hex'));
+            that.log.debug('BodyUtf8: ' + bodyStr);
+            that.log.debug('===============================================');
         }
 
         if (method === 'get') {
