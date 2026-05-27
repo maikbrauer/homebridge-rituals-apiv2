@@ -121,7 +121,7 @@ function RitualsAccessory(log, config) {
         .setCharacteristic(Characteristic.FirmwareRevision, this.version);
 
     if (this.model_version == '1.0') {
-        this.serviceBatt = new Service.BatteryService('Battery', 'AirFresher');
+        this.serviceBatt = new Service.Battery('Battery', 'AirFresher');
         this.serviceBatt
             .setCharacteristic(Characteristic.BatteryLevel, '100')
             .setCharacteristic(
